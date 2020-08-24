@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#90a4ae</color> <!--jasny-->
+    <color name="colorPrimaryDark">#62757f</color> <!--ciemny-->
+    <color name="colorAccent">#c1d5e0</color><!--Bardzo jasny niebieski taki-->
+    <color name="colorUserBackground">#DFDFDF</color> <!--jasny szary-->
+    <color name="background">#eceff1</color>  <!--jescze jasniejszy niebieski-->
+</resources>

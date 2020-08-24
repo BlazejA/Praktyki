@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:clickable="true"
+    app:cardCornerRadius="4dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/cardview_id"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:id="@+id/carPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/carName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="nazwaSamochodu"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

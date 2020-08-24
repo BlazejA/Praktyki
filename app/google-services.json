@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "45709926978",
+    "firebase_url": "https://carfirebaseproject-5bfcc.firebaseio.com",
+    "project_id": "carfirebaseproject-5bfcc",
+    "storage_bucket": "carfirebaseproject-5bfcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45709926978:android:4a7815b53a3d580d5a03db",
+        "android_client_info": {
+          "package_name": "com.hacktyki.car"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45709926978-jcs8qg8drafol4gue9bs9n9fj47sacf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hacktyki.car",
+            "certificate_hash": "4fedae22f5281c4fb8626e1fa90b3fb9e992f3ac"
+          }
+        },
+        {
+          "client_id": "45709926978-9d0m905t4s6esk8rpohgalf4vnq0qpck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hacktyki.car",
+            "certificate_hash": "e6f9f3ba45a99ac750e03388d4006562286daee8"
+          }
+        },
+        {
+          "client_id": "45709926978-g9h1jd8ma0o0uibp6t8n9bc6bft8es3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAW-GHZ0TZpNNY7Ei_z_rAC-70miB4GHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45709926978-g9h1jd8ma0o0uibp6t8n9bc6bft8es3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
