@@ -17,6 +17,7 @@ public class LoginPresenterTest {
         Assert.assertEquals(true, ((MockView) view).pass);
     }
 
+
     private class MockView implements LoginContract.View {
         boolean pass;
 
@@ -27,7 +28,7 @@ public class LoginPresenterTest {
 
         @Override
         public String getPassword() {
-            return "adminadmi";
+            return null;
         }
 
         @Override
@@ -47,7 +48,6 @@ public class LoginPresenterTest {
 
         @Override
         public void loadAccount() {
-
         }
 
         @Override
