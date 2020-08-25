@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.hacktyki.car.AdminPanel.AdminPanelMainAcitivity;
 import com.hacktyki.car.LoginSignUp.SignUp.SignUpActivity;
 import com.hacktyki.car.UserPanel.HomeActivity;
-import com.hacktyki.car.Model.BookedCars;
+import com.hacktyki.car.BaseClasses.BookedCars;
 import com.hacktyki.car.R;
 
 import java.text.SimpleDateFormat;

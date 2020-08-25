@@ -18,8 +18,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.hacktyki.car.Model.BookedCars;
-import com.hacktyki.car.Model.Cars;
+import com.hacktyki.car.BaseClasses.BookedCars;
+import com.hacktyki.car.BaseClasses.Cars;
 import com.hacktyki.car.R;
 
 import java.text.ParseException;
@@ -73,9 +73,7 @@ public class CurrentCarActivity extends AppCompatActivity {
                 int y = cal.get(Calendar.YEAR);
                 int m = cal.get(Calendar.MONTH);
                 int d = cal.get(Calendar.DAY_OF_MONTH);
-
                 DatePickerDialog dialog = new DatePickerDialog(CurrentCarActivity.this, R.style.my_dialog_theme, dateSetListener, y, m, d);
-
                 dialog.show();
 
             }

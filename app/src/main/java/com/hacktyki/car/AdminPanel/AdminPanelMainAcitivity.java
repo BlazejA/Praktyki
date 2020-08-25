@@ -27,16 +27,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.hacktyki.car.Model.BookedCars;
-import com.hacktyki.car.Model.Cars;
-import com.hacktyki.car.Model.MyViewHolder;
+import com.hacktyki.car.BaseClasses.BookedCars;
+import com.hacktyki.car.BaseClasses.Cars;
+import com.hacktyki.car.BaseClasses.MyViewHolder;
 import com.hacktyki.car.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminPanelMainAcitivity extends AppCompatActivity {
+public class AdminPanelMainAcitivity extends AppCompatActivity implements AdminPanelContract.View {
 
     FirebaseAuth firebaseAuth;
     TextView userNameTxt;
@@ -46,6 +46,7 @@ public class AdminPanelMainAcitivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Button addCarActivityBtn, allReservationBtn;
     List<BookedCars> carIdList;
+    AdminPanelPresenter adminPanelPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,8 +57,9 @@ public class AdminPanelMainAcitivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.myrecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setHasFixedSize(true);
+        adminPanelPresenter = new AdminPanelPresenter(this);
 
-        loadData();
+        adminPanelPresenter.loadData();
 
         userNameTxt = (TextView) findViewById(R.id.userName);
         userNameTxt.setText(firebaseAuth.getCurrentUser().getEmail());
@@ -82,8 +84,8 @@ public class AdminPanelMainAcitivity extends AppCompatActivity {
         });
 
     }
-
-    private void loadData() {
+    @Override
+    public void loadData() {
         options = new FirebaseRecyclerOptions.Builder<Cars>().setQuery(dbRef, Cars.class).build();
         adapter = new FirebaseRecyclerAdapter<Cars, MyViewHolder>(options) {
             @Override

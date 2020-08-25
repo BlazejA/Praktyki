@@ -1,4 +1,4 @@
-package com.hacktyki.car;
+package com.hacktyki.car.BaseClasses;
 
 public class BookedCars {
     private String bCarMakes;

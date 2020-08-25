@@ -1,4 +1,4 @@
-package com.hacktyki.car.Model;
+package com.hacktyki.car.BaseClasses;
 
 import android.view.View;
 import android.widget.ImageView;

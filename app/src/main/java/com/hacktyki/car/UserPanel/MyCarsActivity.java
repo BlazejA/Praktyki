@@ -22,8 +22,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.hacktyki.car.Model.BookedCars;
-import com.hacktyki.car.Model.MyViewHolder;
+import com.hacktyki.car.BaseClasses.BookedCars;
+import com.hacktyki.car.BaseClasses.MyViewHolder;
 import com.hacktyki.car.R;
 import com.squareup.picasso.Picasso;
 

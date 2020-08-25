@@ -1,11 +1,9 @@
 package com.hacktyki.car.AdminPanel;
 
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.hacktyki.car.Model.Cars;
+import com.hacktyki.car.BaseClasses.Cars;
 import com.hacktyki.car.R;
 
 public class AdminPanelActivity extends AppCompatActivity {
@@ -81,19 +79,17 @@ public class AdminPanelActivity extends AppCompatActivity {
         if (_model.isEmpty() || _marka.isEmpty() || _registrationNumber.isEmpty()) {
             Toast.makeText(this, "Uzupełnij wszystkie pola!", Toast.LENGTH_SHORT).show();
         } else {
-            newCar.setCarMakes(_marka);
-            newCar.setCarModel(_model);
-            newCar.setCarRegistrationNumber(_registrationNumber);
-            newCar.setCarImageUrl(downloadUrl);
-            dbRef.child(newCar.getCarRegistrationNumber()).setValue(newCar);
+            setCarValues(_marka, _model, _registrationNumber);
             Toast.makeText(AdminPanelActivity.this, "Dodano nowe auto!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private String getExtension(Uri uri) {
-        ContentResolver contentResolver = getContentResolver();
-        MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+    private void setCarValues(String marka, String model, String registrationNumber) {
+        newCar.setCarMakes(marka);
+        newCar.setCarModel(model);
+        newCar.setCarRegistrationNumber(registrationNumber);
+        newCar.setCarImageUrl(downloadUrl);
+        dbRef.child(newCar.getCarRegistrationNumber()).setValue(newCar);
     }
 
     private void fileUploader() {

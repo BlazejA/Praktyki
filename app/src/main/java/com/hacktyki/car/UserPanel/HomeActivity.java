@@ -17,8 +17,8 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.hacktyki.car.Model.Cars;
-import com.hacktyki.car.Model.MyViewHolder;
+import com.hacktyki.car.BaseClasses.Cars;
+import com.hacktyki.car.BaseClasses.MyViewHolder;
 import com.hacktyki.car.R;
 import com.squareup.picasso.Picasso;
 

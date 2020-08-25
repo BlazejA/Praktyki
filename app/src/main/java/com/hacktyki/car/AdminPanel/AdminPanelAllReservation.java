@@ -19,12 +19,12 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.hacktyki.car.Model.BookedCars;
-import com.hacktyki.car.Model.MyViewHolder;
+import com.hacktyki.car.BaseClasses.BookedCars;
+import com.hacktyki.car.BaseClasses.MyViewHolder;
 import com.hacktyki.car.R;
 import com.squareup.picasso.Picasso;
 
-public class AdminPanelAllReservation extends AppCompatActivity {
+public class AdminPanelAllReservation extends AppCompatActivity implements AdminPanelContract.View {
 
     FirebaseAuth firebaseAuth;
     TextView userNameTxt;
@@ -32,6 +32,7 @@ public class AdminPanelAllReservation extends AppCompatActivity {
     FirebaseRecyclerAdapter<BookedCars, MyViewHolder> adapter;
     DatabaseReference dbRef;
     RecyclerView recyclerView;
+    AdminPanelPresenter adminPanelPresenter;
 
 
     @Override
@@ -44,15 +45,17 @@ public class AdminPanelAllReservation extends AppCompatActivity {
         recyclerView = findViewById(R.id.myrecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         recyclerView.setHasFixedSize(true);
+        adminPanelPresenter = new AdminPanelPresenter(this);
 
-        LoadData();
+        adminPanelPresenter.loadData();
 
         userNameTxt = (TextView) findViewById(R.id.userName);
         userNameTxt.setText(firebaseAuth.getCurrentUser().getEmail());
     }
 
-    private void LoadData() {
 
+    @Override
+    public void loadData() {
         options = new FirebaseRecyclerOptions.Builder<BookedCars>().setQuery(dbRef, BookedCars.class).build();
         adapter = new FirebaseRecyclerAdapter<BookedCars, MyViewHolder>(options) {
             @Override
@@ -93,6 +96,5 @@ public class AdminPanelAllReservation extends AppCompatActivity {
         };
         adapter.startListening();
         recyclerView.setAdapter(adapter);
-
     }
 }

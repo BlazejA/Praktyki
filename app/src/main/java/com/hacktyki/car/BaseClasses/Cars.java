@@ -1,4 +1,4 @@
-package com.hacktyki.car;
+package com.hacktyki.car.BaseClasses;
 
 import java.io.Serializable;
 
@@ -7,24 +7,24 @@ public class Cars implements Serializable {
 
     private String carMakes;
     private String carModel;
-    private String imageUrl;
-    public String registrationNumber;
+    private String carImageUrl;
+    private String carRegistrationNumber;
 
 
-    public String getRegistrationNumber() {
-        return registrationNumber;
+    public String getCarRegistrationNumber() {
+        return carRegistrationNumber;
     }
 
-    public void setRegistrationNumber(String registrationNumber) {
-        this.registrationNumber = registrationNumber;
+    public void setCarRegistrationNumber(String carRegistrationNumber) {
+        this.carRegistrationNumber = carRegistrationNumber;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getCarImageUrl() {
+        return carImageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setCarImageUrl(String carImageUrl) {
+        this.carImageUrl = carImageUrl;
     }
 
     public String getCarMakes() {
