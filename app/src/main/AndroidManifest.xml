@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminPanelAllReservation" />
-        <activity android:name=".AdminPanelMainAcitivity" />
-        <activity android:name=".MyCarsActivity" />
-        <activity android:name=".CurrentCarActivity" />
-        <activity android:name=".AdminPanelActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AdminPanel.AdminPanelAllReservation" />
+        <activity android:name=".AdminPanel.AdminPanelMainAcitivity" />
+        <activity android:name=".UserPanel.MyCarsActivity" />
+        <activity android:name=".UserPanel.CurrentCarActivity" />
+        <activity android:name=".AdminPanel.AdminPanelActivity" />
+        <activity android:name=".LoginSignUp.SignUp.SignUpActivity" />
+        <activity android:name=".UserPanel.HomeActivity" />
+        <activity android:name=".LoginSignUp.Login.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">car</string>
+    <string name="fill_all_fields">Wypełnij wszystkie pola!</string>
 </resources>
