@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class LoginPresenterTest {
 
     @Test
-    public void shouldPass() {
+    public void isDataTypeCorrectly() {
         LoginContract.View view = new MockView();
 
         LoginPresenter presenter = new LoginPresenter((LoginContract.View) view);
@@ -27,7 +27,7 @@ public class LoginPresenterTest {
 
         @Override
         public String getPassword() {
-            return "adminadmin";
+            return "adminadmi";
         }
 
         @Override
